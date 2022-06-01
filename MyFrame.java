@@ -18,7 +18,7 @@ class MyFrame extends Frame
 		f1 = new Font("Times",Font.BOLD,30);
 		menu_Index = new MenuBar();
 		menu_1 = new Menu("INDEX");
-		m1 = new MenuItem("Admin");
+		m1 = new MenuItem("Admin1");
 		m2 = new MenuItem("Patient");
 		m3 = new MenuItem("Doctor");
 		
