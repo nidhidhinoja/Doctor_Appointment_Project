@@ -1,9 +1,11 @@
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.AWTEvent.*;
-public class MyFrameUser extends Frame
+import java.io.*;
+import javax.swing.*;
+import java.lang.*;
+
+public class MyFramePatient extends JFrame
 {
-	
 	TextField t1,t2,t3;
 	Label l1,l2,l3;
 	Button b1;
@@ -11,10 +13,10 @@ public class MyFrameUser extends Frame
 	
 	MyActionListener ml1 = new MyActionListener(this);
 	
-	MyFrameUser(String s)
+	MyFramePatient(String s)
 	{
 		super(s);
-		this.setBounds(0, 0, 1000, 1000);
+		this.setBounds(300, 100, 1200, 1000);
 		setLayout(null);
 		
 		t1 = new TextField();
@@ -37,8 +39,13 @@ public class MyFrameUser extends Frame
 	
 		b1.setBounds(300,800,275,100);
 		
-		 f1 = new Font("Arial",Font.BOLD,60);
-		 f2 = new Font("Arial",Font.ITALIC,55);
+		 f1 = new Font("Arial",Font.BOLD,40);
+		 f2 = new Font("Arial",Font.ITALIC,45);
+		 
+		 Color customColor = new Color(100,120,145);
+		Color customColor1 = new Color(210,220,195);
+	    getContentPane().setBackground(customColor);
+		setForeground(Color.black);
 		//SetFont
 		l1.setFont(f1);
 		l2.setFont(f1);
@@ -58,21 +65,13 @@ public class MyFrameUser extends Frame
 		
 		b1.addActionListener(ml1);
 		
-		//When Frames X Button Pressed
-		addWindowListener(new WindowAdapter()
-			{
-				//use closing method Not Closed
-				public void windowClosing(WindowEvent e)
-				{
-					System.exit(0);
-				}
-			});
+		this.setDefaultCloseOperation( JFrame.DISPOSE_ON_CLOSE );
 	}
 	
 	
 	public static void main(String args[])
 	{
-		MyFrameUser mf1 = new MyFrameUser("LOGIN");
+		MyFramePatient mf1 = new MyFramePatient("PATIENT LOGIN");
 		mf1.setVisible(true);
 	}
 }
