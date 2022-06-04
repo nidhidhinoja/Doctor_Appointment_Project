@@ -1,11 +1,14 @@
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.AWTEvent.*;
-public class MyFramePatient1 extends Frame
+import java.io.*;
+import javax.swing.*;
+import java.lang.*;
+
+public class MyFramePatient1 extends JFrame
 {
 	
 	TextField t1,t2,t3;
-	Label l1,l2,l3;
+	JLabel lp1,lp2,lp3;
 	Button b1;
 	Font f1,f2;
 	
@@ -14,8 +17,31 @@ public class MyFramePatient1 extends Frame
 	MyFramePatient1(String s)
 	{
 		super(s);
-		this.setBounds(0, 0, 1200, 1000);
+		this.setBounds(300, 300, 1200, 1000);
 		setLayout(null);
+		
+	    ImageIcon prof = new ImageIcon("prf.jpg");
+		lp1 = new JLabel(prof);
+		lp1.setBounds(50,50,prof.getIconWidth(),prof.getIconHeight());
+		lp1.setVisible(true);
+		add(lp1);
+		
+		lp2 = new JLabel(prof);
+		lp2.setBounds(50,300,prof.getIconWidth(),prof.getIconHeight());
+		lp2.setVisible(true);
+		add(lp2);
+
+        lp3 = new JLabel(prof);
+		lp3.setBounds(50,550,prof.getIconWidth(),prof.getIconHeight());
+		lp3.setVisible(true);
+		add(lp3);		
+		
+		
+
+		Color customColor = new Color(100,120,145);
+		Color customColor1 = new Color(210,220,195);
+		 getContentPane().setBackground(customColor);
+		setForeground(Color.black);
 		
 		//When Frames X Button Pressed
 		addWindowListener(new WindowAdapter()
