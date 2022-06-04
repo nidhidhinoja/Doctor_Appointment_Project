@@ -46,7 +46,7 @@ class MyFrame extends JFrame
 		Color customColor = new Color(100,220,145);
 		Color customColor1 = new Color(210,220,195);
 		getContentPane().setBackground(customColor);
-		setForeground(Color.white);
+		setForeground(Color.black);
 		
 		m1.setFont(f1);
 		m2.setFont(f1);
