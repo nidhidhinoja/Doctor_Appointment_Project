@@ -1,6 +1,9 @@
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.AWTEvent.*;
+import java.io.*;
+import javax.swing.*;
+import java.lang.*;
+
 class MyFrameDoctor extends Frame
 {
 	TextField t1,t2,t3;
@@ -13,7 +16,7 @@ class MyFrameDoctor extends Frame
 	MyFrameDoctor(String s)
 	{
 		super(s);
-		this.setBounds(0, 0, 1200, 1000);
+		this.setBounds(300, 300, 1200, 1000);
 		setLayout(null);
 		
 		t1 = new TextField();
@@ -36,7 +39,7 @@ class MyFrameDoctor extends Frame
 		Color customColor = new Color(100,120,145);
 		Color customColor1 = new Color(210,220,195);
 		setBackground(customColor);
-		setForeground(Color.white);
+		setForeground(Color.black);
 	
 		b1.setBounds(300,800,275,100);
 		
@@ -60,14 +63,15 @@ class MyFrameDoctor extends Frame
 		add(b1);
 		
 		b1.addActionListener(ml1);
-		
+		this.setDefaultCloseOperation( JFrame.DISPOSE_ON_CLOSE  );
+		/*
 		addWindowListener(new WindowAdapter()
 			{
 				public void windowClosing(WindowEvent e)
 				{
 					System.exit(0);
 				}
-			});
+			});*/
 	}
 	
 	
