@@ -1,6 +1,9 @@
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.AWTEvent.*;
+import java.io.*;
+import javax.swing.*;
+import java.lang.*;
+
 class MyFrameAdmin extends Frame
 {
 	TextField t1,t2;
@@ -13,7 +16,7 @@ class MyFrameAdmin extends Frame
 	MyFrameAdmin(String s)
 	{
 		super(s);
-		this.setBounds(0, 0, 1200, 1000);
+		this.setBounds(300, 300, 1200, 1000);
 		setLayout(null);
 		
 		t1 = new TextField();
@@ -33,10 +36,10 @@ class MyFrameAdmin extends Frame
 		 f1 = new Font("Arial",Font.BOLD,40);
 		 f2 = new Font("Arial",Font.ITALIC,45);
 		 
-		 Color customColor = new Color(100,120,145);
+		Color customColor = new Color(100,120,145);
 		Color customColor1 = new Color(210,220,195);
 		setBackground(customColor);
-		setForeground(Color.white);
+		setForeground(Color.black);
 		 
 		//SetFont
 		l1.setFont(f1);
@@ -52,14 +55,15 @@ class MyFrameAdmin extends Frame
 		add(b1);
 		
 		b1.addActionListener(ml1);
-		
+		this.setDefaultCloseOperation( JFrame.DISPOSE_ON_CLOSE  );
+		/*
 		addWindowListener(new WindowAdapter()
 			{
 				public void windowClosing(WindowEvent e)
 				{
 					System.exit(0);
 				}
-			});
+			});*/
 	}
 	
 	
