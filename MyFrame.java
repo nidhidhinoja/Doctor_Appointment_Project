@@ -9,44 +9,29 @@ class MyFrame extends JFrame
 	MenuBar menu_Index;
 	Menu menu_1;
 	MenuItem m1,m2,m3;
-	Font f1,f2;
-	Label l1,l2,l3;
+	Font f1;
+	JLabel label_screen;
 	MyActionListener ml = new MyActionListener(this);
 	
 	MyFrame(String s)
 	{
+		
 		super(s);
 		this.setBounds(0, 0, 1920, 1080);
 		setLayout(null);
-		
-		f1 = new Font("Times",Font.BOLD,30);
+		f1 = new Font("Arial",Font.BOLD,40);
 		menu_Index = new MenuBar();
 		menu_1 = new Menu("INDEX");
 		m1 = new MenuItem("Patient");
 		m2 = new MenuItem("Doctor");
 		m3 = new MenuItem("Admin");
 		
-		l1 = new Label("WELCOME TO");
-		l2 = new Label("DOCTOR APPOINTMENT");
-		l3 = new Label("BOOKING SYSTEM");
-		l1.setBounds(200,300,500,155);
-		l2.setBounds(100,400,555,155);
-		l3.setBounds(180,500,500,155);
 		
-		
-		f1 = new Font("Arial",Font.BOLD,40);
-		f2 = new Font("Arial",Font.ITALIC,45);
-		l1.setFont(f2);
-		l2.setFont(f2);
-		l3.setFont(f2);
-		add(l1);
-		add(l2);
-		add(l3);
-		
-		Color customColor = new Color(100,220,145);
-		Color customColor1 = new Color(210,220,195);
-		getContentPane().setBackground(customColor);
-		setForeground(Color.black);
+	    ImageIcon screen = new ImageIcon("Main_page.jpg");
+		label_screen = new JLabel(screen);
+		label_screen.setBounds(0,10,screen.getIconWidth(),screen.getIconHeight());
+		label_screen.setVisible(true);
+		add(label_screen);
 		
 		m1.setFont(f1);
 		m2.setFont(f1);
@@ -63,16 +48,7 @@ class MyFrame extends JFrame
 		m2.addActionListener(ml);
 		m3.addActionListener(ml);
 		this.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE  );
-		/*
-		addWindowListener(new WindowAdapter()
-			{
-				public void windowClosing(WindowEvent e)
-				{
-					System.exit(0);
-				}
-			});*/
 	}
-	
 	
 	public static void main(String args[])
 	{
