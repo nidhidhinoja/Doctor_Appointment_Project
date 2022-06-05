@@ -12,6 +12,8 @@ public class MyActionListener implements ActionListener
 	MyFrameDoctor mf2;
 	MyFrameAdmin mf3;
 	MyFramePatient1 mf4;
+	MyFramePatient2 mf5;
+	MyFramePatient3 mf6;
 	
 	MyActionListener(MyFrame m)
 	{
@@ -33,32 +35,51 @@ public class MyActionListener implements ActionListener
 	{
 		this.mf4 = m;
 	}
+	MyActionListener(MyFramePatient2 m)
+	{
+		this.mf5 = m;
+	}
+	MyActionListener(MyFramePatient3 m)
+	{
+		this.mf6 = m;
+	}
 	
 	public void actionPerformed(ActionEvent e)
 	{
+		
 		if(e.getActionCommand().equals("Patient"))
 		{
+			
 			mf1 = new MyFramePatient("PATIENT LOGIN");
 			this.mf1.setVisible(true);
-			//this.mf.setVisible(false);
 		}
 		if(e.getActionCommand().equals("Doctor"))
 		{
-			mf2 = new MyFrameDoctor("DOCTOR LOGIN");
+		    mf2 = new MyFrameDoctor("DOCTOR LOGIN");
 			this.mf2.setVisible(true);
-			//this.mf.setVisible(false);
 		}
 		if(e.getActionCommand().equals("Admin"))
 		{
 			mf3 = new MyFrameAdmin("ADMIN LOGIN");
 			this.mf3.setVisible(true);
-			//this.mf.setVisible(false);
 		}
-		if(e.getActionCommand().equals("LOGIN"))
+		if(e.getActionCommand().equals("PATIENT LOGIN"))
 		{
-			mf4 = new MyFramePatient1("PATIENT LOGIN");
+			mf4 = new MyFramePatient1("CHOICE BY REQUIREMENT");
 			this.mf4.setVisible(true);
 			this.mf1.setVisible(false);
 		}
+		if(e.getSource() == this.mf4.b1)
+		{
+			mf5 = new MyFramePatient2("APPOINTMENT");
+			this.mf5.setVisible(true);
+			this.mf4.setVisible(false);
+		}
+		if(e.getSource() == this.mf4.b2)
+		{
+			mf6 = new MyFramePatient3("APPOINTMENT");
+			this.mf6.setVisible(true);
+			this.mf4.setVisible(false);
+		}
 	}
-}
+} 
