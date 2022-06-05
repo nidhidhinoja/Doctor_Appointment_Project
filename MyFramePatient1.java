@@ -6,58 +6,46 @@ import java.lang.*;
 
 public class MyFramePatient1 extends JFrame
 {
-	
-	TextField t1,t2,t3;
-	JLabel lp1,lp2,lp3;
-	Button b1;
+	JLabel label_select;
+	JTextField t1,t2,t3;
+	JButton b1,b2,b3;
 	Font f1,f2;
 	
-	MyActionListener ml1 = new MyActionListener(this);
+	MyActionListener ml = new MyActionListener(this);
 	
 	MyFramePatient1(String s)
 	{
-		super(s);
-		this.setBounds(300, 300, 1200, 1000);
+		super("CHOICE BY REQUIREMENT");
+		this.setBounds(0,0,1920,1080);
 		setLayout(null);
 		
-	    ImageIcon prof = new ImageIcon("prf.jpg");
-		lp1 = new JLabel(prof);
-		lp1.setBounds(50,50,prof.getIconWidth(),prof.getIconHeight());
-		lp1.setVisible(true);
-		add(lp1);
+	    ImageIcon screenL = new ImageIcon("select_page.jpg");
+		label_select = new JLabel(screenL);
+		label_select.setBounds(0,0,screenL.getIconWidth(),screenL.getIconHeight());
+		label_select.setVisible(true);
+		add(label_select);
 		
-		lp2 = new JLabel(prof);
-		lp2.setBounds(50,300,prof.getIconWidth(),prof.getIconHeight());
-		lp2.setVisible(true);
-		add(lp2);
-
-        lp3 = new JLabel(prof);
-		lp3.setBounds(50,550,prof.getIconWidth(),prof.getIconHeight());
-		lp3.setVisible(true);
-		add(lp3);		
+		f1 = new Font("Arial",Font.BOLD,40);
+		f2 = new Font("Arial",Font.ITALIC,45);
+		
+		b1= new JButton("Select doctor");
+		b2= new JButton("Select illeness");
 		
 		
-
-		Color customColor = new Color(100,120,145);
-		Color customColor1 = new Color(210,220,195);
-		 getContentPane().setBackground(customColor);
+		b1.setBounds(200,300,500,120);
+		b2.setBounds(200,700,500,120);
+		
+	    b1.setFont(f2);
+        b2.setFont(f2);
+		
 		setForeground(Color.black);
 		
-		//When Frames X Button Pressed
-		addWindowListener(new WindowAdapter()
-			{
-				//use closing method Not Closed
-				public void windowClosing(WindowEvent e)
-				{
-					System.exit(0);
-				}
-			});
-	}
-	
-	
-	public static void main(String args[])
-	{
-		MyFramePatient1 mf4 = new MyFramePatient1("APPOINTMENT");
-		mf4.setVisible(true);
+		label_select.add(b1);
+		label_select.add(b2);
+		
+		b1.addActionListener(ml);
+		b2.addActionListener(ml);
+		
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	}
 }
