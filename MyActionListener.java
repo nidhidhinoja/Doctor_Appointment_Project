@@ -44,6 +44,7 @@ public class MyActionListener implements ActionListener
 		this.mf6 = m;
 	}
 	
+	
 	public void actionPerformed(ActionEvent e)
 	{
 		
@@ -58,6 +59,7 @@ public class MyActionListener implements ActionListener
 		    mf2 = new MyFrameDoctor("DOCTOR LOGIN");
 			this.mf2.setVisible(true);
 		}
+		
 		if(e.getActionCommand().equals("Admin"))
 		{
 			mf3 = new MyFrameAdmin("ADMIN LOGIN");
@@ -69,17 +71,24 @@ public class MyActionListener implements ActionListener
 			this.mf4.setVisible(true);
 			this.mf1.setVisible(false);
 		}
-		if(e.getSource() == this.mf4.b1)
+		if(e.getActionCommand().equals("Select doctor"))
 		{
-			mf5 = new MyFramePatient2("APPOINTMENT");
+			mf5 = new MyFramePatient2("CHOICE BY REQUIREMENT");
 			this.mf5.setVisible(true);
 			this.mf4.setVisible(false);
 		}
-		if(e.getSource() == this.mf4.b2)
+		if(e.getActionCommand().equals("Book your appointment1"))
 		{
 			mf6 = new MyFramePatient3("APPOINTMENT");
 			this.mf6.setVisible(true);
-			this.mf4.setVisible(false);
-		}
+			mf6.b1.setEnabled(false);
+			this.mf5.setVisible(false);
+		}/*
+		if(e.getActionCommand().equals(""))
+		{
+			mf6 = new MyFramePatient3("APPOINTMENT");
+			this.mf6.setVisible(true);
+			this.mf5.setVisible(false);
+		}*/
 	}
 } 
