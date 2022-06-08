@@ -11,7 +11,6 @@ public class MyFramePatient extends JFrame
 	JButton b1;
 	Font f1,f2;
 	JLabel label_login;
-	
 	MyActionListener mli = new MyActionListener(this);
 	
 	MyFramePatient(String s)
@@ -19,7 +18,6 @@ public class MyFramePatient extends JFrame
 		super("PATIENT LOGIN");
 		this.setBounds(0, 0, 1920, 1080);
 		setLayout(null);
-		
 		t1 = new JTextField();
 		t2 = new JTextField();
 		t3 = new JTextField();
@@ -30,7 +28,7 @@ public class MyFramePatient extends JFrame
 		
 	    ImageIcon screenL = new ImageIcon("login_page.jpg");
 		label_login = new JLabel(screenL);
-		label_login.setBounds(0,10,screenL.getIconWidth(),screenL.getIconHeight());
+		label_login.setBounds(0,0,screenL.getIconWidth(),screenL.getIconHeight());
 		label_login.setVisible(true);
 		add(label_login);
 		
@@ -67,7 +65,6 @@ public class MyFramePatient extends JFrame
 		label_login.add(b1);
 		
 		b1.addActionListener(mli);
-		
 		this.setDefaultCloseOperation( JFrame.DISPOSE_ON_CLOSE );
 	}
 }
