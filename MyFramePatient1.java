@@ -6,11 +6,11 @@ import java.lang.*;
 
 public class MyFramePatient1 extends JFrame
 {
+
 	JLabel label_select;
 	JTextField t1,t2,t3;
 	JButton b1,b2,b3;
 	Font f1,f2;
-	
 	MyActionListener ml = new MyActionListener(this);
 	
 	MyFramePatient1(String s)
