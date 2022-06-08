@@ -29,7 +29,7 @@ class MyFrame extends JFrame
 		
 	    ImageIcon screen = new ImageIcon("Main_page.jpg");
 		label_screen = new JLabel(screen);
-		label_screen.setBounds(0,10,screen.getIconWidth(),screen.getIconHeight());
+		label_screen.setBounds(0,0,screen.getIconWidth(),screen.getIconHeight());
 		label_screen.setVisible(true);
 		add(label_screen);
 		
