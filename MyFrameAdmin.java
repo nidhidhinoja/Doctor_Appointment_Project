@@ -6,12 +6,12 @@ import java.lang.*;
 
 class MyFrameAdmin extends JFrame
 {
+	
 	JTextField t1,t2;
 	JLabel l1,l2;
 	JLabel label_login;
 	JButton b1;
 	Font f1,f2;
-	
 	MyActionListener ml1 = new MyActionListener(this);
 	
 	MyFrameAdmin(String s)
@@ -19,7 +19,6 @@ class MyFrameAdmin extends JFrame
 		super("ADMIN LOGIN");
 		this.setBounds(0,0,1920,1080);
 		setLayout(null);
-		
 		t1 = new JTextField();
 		t2 = new JTextField();
 		b1 = new JButton("ADMIN LOGIN");
@@ -28,7 +27,7 @@ class MyFrameAdmin extends JFrame
 		
 	    ImageIcon screenL = new ImageIcon("login_page.jpg");
 		label_login = new JLabel(screenL);
-		label_login.setBounds(0,10,screenL.getIconWidth(),screenL.getIconHeight());
+		label_login.setBounds(0,0,screenL.getIconWidth(),screenL.getIconHeight());
 		label_login.setVisible(true);
 		add(label_login);
 		
