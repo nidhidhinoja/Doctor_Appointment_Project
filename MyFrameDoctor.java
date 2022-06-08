@@ -11,7 +11,6 @@ class MyFrameDoctor extends JFrame
 	JButton b1;
 	Font f1,f2;
 	JLabel label_login;
-	
 	MyActionListener ml1 = new MyActionListener(this);
 	
 	MyFrameDoctor(String s)
@@ -19,7 +18,6 @@ class MyFrameDoctor extends JFrame
 		super("DOCTOR LOGIN");
 		this.setBounds(0, 0, 1920, 1080);
 		setLayout(null);
-		
 		t1 = new JTextField();
 		t2 = new JTextField();
 		t3 = new JTextField();
