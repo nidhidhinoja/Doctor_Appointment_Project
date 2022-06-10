@@ -8,7 +8,7 @@ public class MyFramePatient2 extends JFrame
 {
 	
 	JLabel lp1,lp2,lp3,lp4,lt1,lt2,lt3,lt4,lt5,lt6,lt7,lt8,lt9,lt10,lt11,lt12,label_select;
-	JButton b1,b2,b3,b4,bpage1,bpage2,bpage3;
+	JButton b1,b2,b3,b4,bpage1,bpage2,bpage3,bpage4;
 	Font f1,f2;
 	
 	MyActionListener ml = new MyActionListener(this);
@@ -21,15 +21,14 @@ public class MyFramePatient2 extends JFrame
 		
 	
 		setForeground(Color.black);
-		b1 = new JButton("Book your appointment1");
-		b2 = new JButton("Book your appointment2");
-		b3 = new JButton("Book your appointment3");
-		b4 = new JButton("Book your appointment4");
+		b1 = new JButton("Book your appointment for dr.ABC");
+		b2 = new JButton("Book your appointment for dr.XYZ");
+		b3 = new JButton("Book your appointment for dr.EFG");
+		b4 = new JButton("Book your appointment for dr.RST");
 		
-		bpage1 = new JButton("page-2");
-		bpage2 = new JButton("page-3");
-		bpage3 = new JButton("page-4");
-		
+		bpage1 = new JButton("Previous");
+		bpage2 = new JButton("Next");
+
 		f1 = new Font("Arial Rounded MT Bold",Font.BOLD,30);
 		f2 = new Font("Times",Font.BOLD,20);
 		
@@ -46,9 +45,8 @@ public class MyFramePatient2 extends JFrame
 		b3.setBounds(500,690,800,50);
 		b4.setBounds(500,930,800,50);
 		
-		bpage1.setBounds(1300,1000,100,30);
-		bpage2.setBounds(1400,1000,100,30);
-		bpage3.setBounds(1500,1000,100,30);
+		bpage1.setBounds(0,0,200,30);
+		bpage2.setBounds(1720,0,200,30);
 		
 		b1.setFont(f2);
 		b2.setFont(f2);
@@ -57,7 +55,6 @@ public class MyFramePatient2 extends JFrame
 		
 		bpage1.setFont(f2);
 		bpage2.setFont(f2);
-		bpage3.setFont(f2);
 		
 		label_select.add(b1);
 		label_select.add(b2);
@@ -66,7 +63,6 @@ public class MyFramePatient2 extends JFrame
 		
 		label_select.add(bpage1);
 		label_select.add(bpage2);
-		label_select.add(bpage3);
 		
 		
 		lp1 = new JLabel(prof);
@@ -172,6 +168,7 @@ public class MyFramePatient2 extends JFrame
 		
 		bpage1.addActionListener(ml);
 		bpage2.addActionListener(ml);
-		bpage3.addActionListener(ml);
+		
 		this.setDefaultCloseOperation( JFrame.DISPOSE_ON_CLOSE );
 	}
+}
